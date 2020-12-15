@@ -16,16 +16,17 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 code main.dart
+/**/
 import 'package:flutter/material.dart';
-
+/**/
 import 'favoriteA.dart';
 import 'favoriteB.dart';
 import 'favoriteC.dart';
-
+/**/
 void main() {
   runApp(MyApp());
 }
-
+/**/
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -39,16 +40,16 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+/**/
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
-
+/**/
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-
+/**/
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
@@ -57,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-
+/**/
   Widget titleSection = Container(
     padding: const EdgeInsets.all(32),
     child: Row(
@@ -91,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ],
     ),
   );
-
+/**/
   Widget textSection = Container(
     padding: const EdgeInsets.all(32),
     child: Text(
@@ -104,10 +105,11 @@ class _MyHomePageState extends State<MyHomePage> {
       softWrap: true,
     ),
   );
+  /**/
   @override
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
-
+/**/
     Widget buttonSection = Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -139,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
     );
-
+/**/
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -157,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
           textSection,
         ],
       ),
-
+/**/
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
@@ -165,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
-
+/**/
   Column _buildButtonColumn(Color color, IconData icon, String label) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -187,12 +189,12 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
+/**/
 class FavoriteWidget extends StatefulWidget {
   @override
   _FavoriteWidgetState createState() => _FavoriteWidgetState();
 }
-
+/**/
 class _FavoriteWidgetState extends State<FavoriteWidget> {
   bool _isFavorited = true;
   int _favoriteCount = 41;
@@ -208,7 +210,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
       }
     });
   }
-
+/**/
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
